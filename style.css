@@ -1,0 +1,80 @@
+/* CAH 205 AI Newsletter Styles */
+
+:root {
+  --primary-color: #2563eb; /* AI Blue */
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --bg-light: #f9fafb;
+  --border-color: #e5e7eb;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-main);
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+h1, h2, h3 {
+  color: #111827;
+  margin-top: 1.5em;
+}
+
+.newsletter-header {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Post List Styling */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.post-list li {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+.post-list a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.post-list a:hover {
+  text-decoration: underline;
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Call to Action button */
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}

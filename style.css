@@ -71,10 +71,10 @@ h1, h2, h3 {
 .cta-button {
   display: inline-block;
   background-color: var(--primary-color);
-  color: black;
+  color: white;
   padding: 12px 24px;
   border-radius: 6px;
-  text-decoration: none;
+  text-decoration: **Text**;
   font-weight: bold;
   margin-top: 20px;
 }

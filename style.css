@@ -4,7 +4,7 @@
   --primary-color: #2563eb; /* AI Blue */
   --text-main: #1f2328;
   --text-muted: #1f2328;
-  --bg-light: #FFFFFF;
+  --bg-light: #ffffff;
   --border-color: #e5e7eb;
 }
 
@@ -15,7 +15,7 @@ body {
   max-width: 650px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 h1, h2, h3 {

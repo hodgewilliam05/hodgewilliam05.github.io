@@ -2,8 +2,8 @@
 
 :root {
   --primary-color: #2563eb; /* AI Blue */
-  --text-main: #ffffff;
-  --text-muted: #ffffff;
+  --text-main: #FFFFFF;
+  --text-muted: #FFFFFF;
   --bg-light: #ffffff;
   --border-color: #e5e7eb;
 }
@@ -15,7 +15,7 @@ body {
   max-width: 650px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 h1, h2, h3 {

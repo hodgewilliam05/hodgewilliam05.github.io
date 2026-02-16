@@ -1,105 +1,109 @@
-/* CAH 205 AI - Dark Mode Newsletter Styles */
+/* CAH 205 AI - Vibrant & Clean Newsletter Styles */
 
 :root {
-  --bg-dark: #0f172a;           /* Deep Navy/Black */
-  --bg-card: #1e293b;           /* Lighter Slate for sections */
-  --accent-blue: #38bdf8;       /* Electric Blue */
-  --accent-purple: #a855f7;     /* Cyber Purple */
-  --text-main: #f1f5f9;         /* Off-white */
-  --text-muted: #94a3b8;        /* Soft Gray */
-  --border-color: #334155;
+  --bg-main: #fdfdfb;           /* Soft Paper White */
+  --text-main: #1a1a1a;         /* Near Black */
+  --text-muted: #57606a;        /* Steel Gray */
+  --accent-primary: #ff6d8b;    /* Persimmon / Coral */
+  --accent-secondary: #00d2ff;  /* Cool Sky Blue */
+  --accent-tertiary: #00b894;   /* Jade Green */
+  --border-color: #e1e4e8;
 }
 
 body {
-  font-family: 'Inter', -apple-system, sans-serif;
-  line-height: 1.7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.8;
   color: var(--text-main);
-  background-color: var(--bg-dark);
-  max-width: 700px;
+  background-color: var(--bg-main);
+  max-width: 680px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
 h1, h2, h3 {
-  color: #ffffff;
-  letter-spacing: -0.02em;
+  color: var(--text-main);
+  font-weight: 800;
+  line-height: 1.2;
 }
 
-/* Header Gradient */
+/* Vibrant Header */
 .newsletter-header {
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 4px solid var(--accent-secondary);
   padding-bottom: 20px;
   margin-bottom: 40px;
-  text-align: center;
 }
 
 .newsletter-header h1 {
-  background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  margin: 0;
+  color: var(--accent-primary);
 }
 
 /* Post List Styling */
 .post-list {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
 }
 
 .post-list li {
-  padding: 20px;
-  margin-bottom: 15px;
-  background: var(--bg-card);
+  padding: 25px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 16px;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .post-list li:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent-blue);
+  transform: scale(1.02);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 10px 20px rgba(0, 210, 255, 0.1);
 }
 
 .post-list a {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--accent-blue);
+  font-size: 1.3rem;
+  color: var(--text-main);
   text-decoration: none;
+  font-weight: 700;
   display: block;
+  margin-bottom: 8px;
+}
+
+.post-list a:hover {
+  color: var(--accent-secondary);
 }
 
 .post-date {
-  font-size: 0.75rem;
-  color: var(--accent-purple);
+  font-size: 0.8rem;
+  color: var(--accent-tertiary);
   font-weight: bold;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-/* Content Blocks */
-blockquote {
-  border-left: 4px solid var(--accent-purple);
-  background: rgba(168, 85, 247, 0.1);
-  margin: 30px 0;
-  padding: 20px;
-  font-style: italic;
-  border-radius: 0 8px 8px 0;
 }
 
 /* Call to Action */
 .cta-button {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-  color: #ffffff;
-  padding: 14px 28px;
-  border-radius: 50px;
+  background: var(--accent-primary);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 12px;
   text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
-  transition: opacity 0.2s ease;
+  font-weight: 700;
+  box-shadow: 0 4px 0px #d64561; /* 3D effect */
+  transition: transform 0.1s;
 }
 
-.cta-button:hover {
-  opacity: 0.9;
+.cta-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0px #d64561;
 }
+
+/* Quotes/Callouts */
+blockquote {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f0f7ff;
+  border-left: 5px solid var(--accent-secondary);
+  border-

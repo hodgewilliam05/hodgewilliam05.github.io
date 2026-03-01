@@ -1,65 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Repo Update</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Audio Engineering | William Hodge</title>
+    <style>
+        :root {
+            --bg: #050505;
+            --panel: #1a1a1a;
+            --accent: #bc13fe; /* Electric Purple */
+            --neon: #39ff14;   /* Neon Green */
+            --text: #ffffff;
+            --shadow: 5px 5px 0px #bc13fe;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+        }
+
+        /* --- Navigational Panel --- */
+        nav {
+            width: 250px;
+            height: 100vh;
+            background: var(--panel);
+            border-right: 3px solid var(--accent);
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 1rem;
+        }
+
+        nav h2 {
+            font-size: 1.2rem;
+            color: var(--neon);
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--neon);
+            padding-bottom: 10px;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 1rem 0;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--neon);
+            padding-left: 10px;
+        }
+
+        /* --- Main Content Area --- */
+        main {
+            margin-left: 280px;
+            padding: 3rem;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            line-height: 0.9;
+            background: linear-gradient(to right, var(--accent), var(--neon));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(3px 3px 0px #fff);
+        }
+
+        .author-tag {
+            background: var(--neon);
+            color: #000;
+            padding: 5px 15px;
+            font-weight: bold;
+            display: inline-block;
+            transform: rotate(-2deg);
+        }
+
+        /* --- Post List --- */
+        .post-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .post-list li {
+            background: var(--panel);
+            border: 2px solid var(--text);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: 0.2s;
+        }
+
+        .post-list li:hover {
+            box-shadow: 8px 8px 0px var(--neon);
+            transform: translate(-3px, -3px);
+        }
+
+        .post-list h3 {
+            color: var(--neon);
+            margin-top: 0;
+        }
+
+        /* --- Resources Section --- */
+        #resources {
+            margin-top: 5rem;
+            background: var(--accent);
+            color: #000;
+            padding: 2rem;
+            border: 3px solid #fff;
+        }
+
+        #resources h2 { text-transform: uppercase; }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .resource-item {
+            background: #fff;
+            padding: 1rem;
+            border: 2px solid #000;
+        }
+
+        footer {
+            margin-top: 5rem;
+            padding-bottom: 2rem;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+    </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #0d1117; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #c9d1d9;">
-    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; background-color: #161b22; margin-top: 20px; border: 1px solid #30363d; border-radius: 8px;">
-        <tr>
-            <td align="center" style="padding: 40px 0 30px 0; background: linear-gradient(135deg, #1f6feb 0%, #8957e5 100%); border-radius: 8px 8px 0 0;">
-                <h1 style="margin: 0; color: #ffffff; font-size: 28px; letter-spacing: 2px; text-transform: uppercase;">Build Log <span style="font-weight: 300;">v2.1</span></h1>
-                <p style="color: #e6edf3; margin-top: 10px; opacity: 0.9;">Latest pushes to <strong>username/repository</strong></p>
-            </td>
-        </tr>
+<body>
 
-        <tr>
-            <td style="padding: 30px 40px;">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #21262d; border-radius: 12px; border: 1px solid #30363d;">
-                    <tr>
-                        <td style="padding: 20px;">
-                            <span style="background-color: #238636; color: white; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold;">NEW FEATURE</span>
-                            <h2 style="color: #58a6ff; margin: 15px 0 10px 0;">⚡ Concurrent Processing</h2>
-                            <p style="line-height: 1.6; color: #8b949e;">We've integrated a new threading model that increases throughput by 40%. Check out the `/src/core` directory for the latest implementation.</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+    <nav>
+        <h2>Control Panel</h2>
+        <a href="#feed">Newsletter Feed</a>
+        <a href="#resources">Engineering Resources</a>
+        <a href="#">Archives</a>
+        <a href="#">Contact William</a>
+    </nav>
 
-        <tr>
-            <td style="padding: 0 40px 30px 40px;">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tr>
-                        <td width="48%" style="background-color: #161b22; border: 1px border-style: dashed; border-color: #30363d; padding: 15px; border-radius: 10px; text-align: center;">
-                            <div style="font-size: 24px; font-weight: bold; color: #3fb950;">+1,240</div>
-                            <div style="font-size: 12px; color: #8b949e;">Lines Added</div>
-                        </td>
-                        <td width="4%"></td>
-                        <td width="48%" style="background-color: #161b22; border: 1px border-style: dashed; border-color: #30363d; padding: 15px; border-radius: 10px; text-align: center;">
-                            <div style="font-size: 24px; font-weight: bold; color: #f85149;">-412</div>
-                            <div style="font-size: 12px; color: #8b949e;">Lines Removed</div>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+    <main>
+        <header>
+            <h1>AI in Audio<br>Engineering</h1>
+            <div class="author-tag">WILLIAM HODGE // CAH 205</div>
+        </header>
 
-        <tr>
-            <td align="center" style="padding: 0 40px 40px 40px;">
-                <a href="https://github.com" style="background-color: #ffffff; color: #0d1117; padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; display: inline-block;">View on GitHub →</a>
-            </td>
-        </tr>
+        <section id="feed">
+            <h2 style="color: var(--neon);">// LATEST ENTRIES</h2>
+            <ul class="post-list">
+                <li>
+                    <h3>Neural Reverb: Beyond the Impulse Response</h3>
+                    <p>How real-time AI modeling is recreating the physics of impossible spaces.</p>
+                </li>
+                <li>
+                    <h3>The End of Mastering?</h3>
+                    <p>Comparing the latest cloud-based AI mastering chains with traditional analog signal paths.</p>
+                </li>
+            </ul>
+        </section>
 
-        <tr>
-            <td align="center" style="padding: 20px; background-color: #0d1117; border-top: 1px solid #30363d; border-radius: 0 0 8px 8px;">
-                <p style="font-size: 12px; color: #484f58; margin: 0;">
-                    Sent from the Terminal. <br>
-                    <a href="#" style="color: #58a6ff; text-decoration: none;">Unsubscribe</a> | <a href="#" style="color: #58a6ff; text-decoration: none;">Settings</a>
-                </p>
-            </td>
-        </tr>
-    </table>
+        <section id="resources">
+            <h2>Technical Resources</h2>
+            <div class="resource-grid">
+                <div class="resource-item">
+                    <strong>AudioML Datasets</strong>
+                    <p>Open-source stems for training your own isolation models.</p>
+                </div>
+                <div class="resource-item">
+                    <strong>Plugin Dev Kit</strong>
+                    <p>Essential Python libraries for real-time VST development.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2026 William Hodge | CAH 205 AI Newsletter
+        </footer>
+    </main>
+
 </body>
 </html>
 </head>

@@ -5,163 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI in Audio Engineering | William Hodge</title>
     <style>
-        /* Core Colors */
         :root {
-            --black: #000000;
+            --black: #050505;
             --white: #ffffff;
-            --blue: #0051ff;
-            --green: #00ff88;
-            --pink: #ff0077;
+            /* Mixed "Signal" Colors */
+            --neon-blue: #00f2ff;
+            --neon-purple: #bc13fe;
+            --neon-pink: #ff00de;
+            --gradient: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             background-color: var(--white);
             color: var(--black);
             margin: 0;
-            line-height: 1.4;
+            padding: 0;
+            overflow-x: hidden;
         }
 
-        /* Flashy Header Section */
+        /* Flashy Header with Gradient Underline */
         header {
-            padding: 80px 5%;
-            border-bottom: 5px solid var(--black);
-            background: var(--white);
+            padding: 100px 5% 60px 5%;
+            background: var(--black);
+            color: var(--white);
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background: var(--gradient);
         }
 
         h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 900;
+            font-size: clamp(3rem, 10vw, 6rem);
             margin: 0;
+            line-height: 0.9;
             text-transform: uppercase;
-            letter-spacing: -3px;
-            line-height: 0.85;
+            letter-spacing: -4px;
         }
 
-        .author-box {
+        .author-tag {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-top: 20px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            display: inline-block;
-            border: 3px solid var(--black);
-            padding: 5px 15px;
-            background: var(--green); /* Initial flashy color */
+            display: block;
+            color: var(--neon-blue);
         }
 
         main {
-            padding: 60px 5%;
-            max-width: 1200px;
+            padding: 80px 5%;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
-        /* Post List Styling */
+        /* Section Label */
+        .section-header {
+            font-size: 1.2rem;
+            font-weight: 900;
+            border-bottom: 2px solid var(--black);
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Flashy Post List */
         .post-list {
             list-style: none;
             padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            margin: 0;
         }
 
         .post-list li {
-            border: 5px solid var(--black);
-            padding: 30px;
-            transition: 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 200px;
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+            display: grid;
+            grid-template-columns: 150px 1fr auto;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
         }
 
-        /* Mixed Color Interaction */
-        .post-list li:nth-child(3n+1):hover { background-color: var(--blue); color: var(--white); }
-        .post-list li:nth-child(3n+2):hover { background-color: var(--pink); color: var(--white); }
-        .post-list li:nth-child(3n+3):hover { background-color: var(--green); color: var(--black); }
-
+        /* Mixed Color Hover Effect */
         .post-list li:hover {
-            transform: translate(-8px, -8px);
-            box-shadow: 8px 8px 0px var(--black);
+            padding-left: 30px;
+            background: rgba(0, 0, 0, 0.02);
         }
 
-        .date {
-            font-family: monospace;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+        .post-list li:hover .post-title {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .post-title {
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-            line-height: 1.1;
-        }
-
-        .description {
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        footer {
-            padding: 40px 5%;
-            background: var(--black);
-            color: var(--white);
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        @media (max-width: 600px) {
-            h1 { letter-spacing: -1px; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>AI IN AUDIO<br>ENGINEERING</h1>
-        <div class="author-box">WILLIAM HODGE | CAH 205</div>
-    </header>
-
-    <main>
-        <ul class="post-list">
-            <li>
-                <div>
-                    <div class="date">01 MAR 2026</div>
-                    <div class="post-title">Neural Mixing Engines</div>
-                    <p class="description">Can AI truly understand the "soul" of a mix? A look at the latest algorithmic gain staging.</p>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <div class="date">22 FEB 2026</div>
-                    <div class="post-title">The Latency Myth</div>
-                    <p class="description">Exploring how transformer models are finally achieving sub-2ms processing for live sound.</p>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <div class="date">15 FEB 2026</div>
-                    <div class="post-title">Vocal Cloning Ethics</div>
-                    <p class="description">The legal battle over AI voice models and what it means for session singers in 2026.</p>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <div class="date">08 FEB 2026</div>
-                    <div class="post-title">Generative Synth Patches</div>
-                    <p class="description">Why browsing presets is dead: Meet the synths that build sounds from text prompts.</p>
-                </div>
-            </li>
-        </ul>
-    </main>
-
-    <footer>
-        <span>CAH 205 NEWSLETTER</span>
-        <span>&copy; 2026 WILLIAM HODGE</span>
-    </footer>
-
-</body>
-</html>
+        .post-list li::before {
+            content: '→';
+            position: absolute;
+            left: -20px;
+            opacity
 </head>
 <body>
 

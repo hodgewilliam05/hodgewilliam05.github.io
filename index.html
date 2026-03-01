@@ -6,137 +6,118 @@
     <title>AI in Audio Engineering | William Hodge</title>
     <style>
         :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --accent-color: #00f2fe;
-            --text-dark: #2d3436;
-            --bg-light: #f9f9f9;
+            --bg-gradient: linear-gradient(45deg, #ff00cc, #3333ff, #24ff8a);
+            --glass: rgba(255, 255, 255, 0.95);
+            --accent: #6200ea;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: var(--bg-gradient);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background: var(--glass);
+            width: 90%;
+            max-width: 650px;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            text-align: center;
         }
 
         header {
-            background: var(--primary-gradient);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .course-tag {
+            background: var(--accent);
             color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-            letter-spacing: -1px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            font-weight: 300;
+        h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin: 15px 0 5px 0;
+            background: var(--bg-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200%;
         }
 
-        main {
-            max-width: 800px;
-            margin: -40px auto 40px;
-            padding: 20px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        .author {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
         }
 
-        .section-title {
-            border-left: 5px solid #764ba2;
-            padding-left: 15px;
-            margin-bottom: 25px;
-            color: #4834d4;
-        }
-
-        /* Post List Styling */
         .post-list {
             list-style: none;
             padding: 0;
+            margin: 20px 0;
+            text-align: left;
         }
 
+        /* Styling for future list items */
         .post-list li {
+            background: #f8f9fa;
+            margin: 10px 0;
             padding: 15px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #eee;
+            border-radius: 12px;
+            border-left: 5px solid var(--accent);
             transition: transform 0.2s ease;
         }
 
         .post-list li:hover {
-            transform: translateX(10px);
-            color: #764ba2;
+            transform: scale(1.02);
         }
 
         footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            color: #636e72;
-        }
-
-        .badge {
-            display: inline-block;
-            background: var(--accent-color);
-            color: #2d3436;
-            padding: 4px 12px;
-            border-radius: 20px;
+            margin-top: 30px;
             font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 10px;
+            color: #999;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <span class="badge">CAH 205 AI Newsletter</span>
-        <h1>AI in Audio Engineering</h1>
-        <p>Curated by <strong>William Hodge</strong></p>
-    </header>
-
-    <main>
-        <h2 class="section-title">Latest Dispatches</h2>
-        
-        <ul class="post-list">
-            </ul>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 | William Hodge | CAH 205</p>
-    </footer>
-
-</body>
-</html>
-</head>
-<body>
-
     <div class="container">
         <header>
-            <p class="subtitle">CAH 205</p>
+            <span class="course-tag">CAH 205</span>
             <h1>AI in Audio Engineering</h1>
-            <div class="author-tag">By William Hodge</div>
+            <p class="author">By William Hodge</p>
         </header>
 
-        <main class="newsletter-section">
-            <h2>Recent Updates</h2>
-            <p>Welcome to the intersection of neural networks and sound waves.</p>
-            
+        <section>
+            <h3 style="color: #444;">Latest Updates</h3>
             <ul class="post-list">
-                <li>No posts published yet. Stay tuned for the first drop.</li>
-            </ul>
-        </main>
+                </ul>
+        </section>
 
         <footer>
-            &copy; 2026 William Hodge | AI in Audio Engineering
+            &copy; 2026 AI in Audio Engineering | William Hodge
         </footer>
     </div>
 

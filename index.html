@@ -6,95 +6,116 @@
     <title>AI in Audio Engineering | William Hodge</title>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --accent-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%, #f093fb 100%);
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --accent-color: #00f2fe;
+            --text-dark: #2d3436;
+            --bg-light: #f9f9f9;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 800px;
-            padding: 40px 20px;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
         header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 4rem 2rem;
             text-align: center;
-            padding-bottom: 60px;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
-        h1 {
+        header h1 {
+            margin: 0;
             font-size: 3rem;
-            margin-bottom: 10px;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             letter-spacing: -1px;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-dim);
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
-        .author-tag {
-            margin-top: 15px;
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
         }
 
-        .newsletter-section {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border-left: 4px solid #4facfe;
+        main {
+            max-width: 800px;
+            margin: -40px auto 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 0;
-            color: #00f2fe;
+        .section-title {
+            border-left: 5px solid #764ba2;
+            padding-left: 15px;
+            margin-bottom: 25px;
+            color: #4834d4;
         }
 
+        /* Post List Styling */
         .post-list {
             list-style: none;
             padding: 0;
-            margin-top: 20px;
         }
 
-        /* Styling for when you eventually add posts */
         .post-list li {
             padding: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--text-dim);
-            font-style: italic;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            transition: transform 0.2s ease;
+        }
+
+        .post-list li:hover {
+            transform: translateX(10px);
+            color: #764ba2;
         }
 
         footer {
             text-align: center;
-            margin-top: 50px;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #636e72;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #2d3436;
+            padding: 4px 12px;
+            border-radius: 20px;
             font-size: 0.8rem;
-            color: var(--text-dim);
+            font-weight: bold;
+            margin-bottom: 10px;
         }
     </style>
+</head>
+<body>
+
+    <header>
+        <span class="badge">CAH 205 AI Newsletter</span>
+        <h1>AI in Audio Engineering</h1>
+        <p>Curated by <strong>William Hodge</strong></p>
+    </header>
+
+    <main>
+        <h2 class="section-title">Latest Dispatches</h2>
+        
+        <ul class="post-list">
+            </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | William Hodge | CAH 205</p>
+    </footer>
+
+</body>
+</html>
 </head>
 <body>
 
@@ -172,8 +193,6 @@
 
     <footer>
         <p align="center">
-  <img src="Gemini Image 2.svg" alt="Music Palette Newsletter Header" width="500%" style="max-width: 800px;">
-</p>
         <p>&copy; 2026 William Hodge. Created for CAH 205.</p>
     </footer>
 

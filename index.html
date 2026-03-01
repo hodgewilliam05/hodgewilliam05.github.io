@@ -6,120 +6,161 @@
     <title>AI in Audio Engineering | William Hodge</title>
     <style>
         :root {
-            --bg-color: #0d0d0f;
-            --card-bg: #16161a;
-            --accent-color: #00f2ff; /* Electric Cyan */
-            --secondary-accent: #7000ff; /* Deep Purple */
-            --text-main: #e0e0e0;
-            --text-dim: #a0a0a0;
+            --black: #000000;
+            --white: #ffffff;
+            --accent-1: #00ffff; /* Cyan */
+            --accent-2: #ff00ff; /* Magenta */
+            --accent-3: #ffff00; /* Yellow */
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--white);
+            color: var(--black);
             margin: 0;
             padding: 0;
-            line-height: 1.6;
         }
 
+        /* Bold Black Header */
         header {
-            padding: 4rem 2rem;
+            background-color: var(--black);
+            color: var(--white);
+            padding: 5rem 2rem;
             text-align: center;
-            background: linear-gradient(180deg, #1a1a2e 0%, var(--bg-color) 100%);
-            border-bottom: 1px solid #333;
+            border-bottom: 10px solid var(--accent-1);
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 4rem;
             margin: 0;
-            letter-spacing: -1px;
-            background: linear-gradient(90deg, var(--accent-color), var(--secondary-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 0.9;
         }
 
-        .author {
-            font-size: 1.1rem;
-            color: var(--text-dim);
-            margin-top: 10px;
-            letter-spacing: 2px;
+        .author-tag {
+            display: inline-block;
+            background: var(--accent-2);
+            color: var(--black);
+            padding: 5px 15px;
+            font-weight: bold;
+            margin-top: 20px;
+            transform: rotate(-2deg);
         }
 
         main {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 4rem 2rem;
         }
 
-        /* Flashy Post List Design */
+        /* Flashy Mixed-Color Post List */
         .post-list {
             list-style: none;
             padding: 0;
         }
 
         .post-list li {
-            background: var(--card-bg);
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid #222;
-            transition: all 0.3s ease;
+            border: 4px solid var(--black);
+            margin-bottom: 2rem;
+            padding: 2rem;
             position: relative;
-            overflow: hidden;
-            cursor: pointer;
+            background: var(--white);
+            transition: all 0.2s ease-in-out;
         }
 
-        /* The "Flashy" Hover Effect */
+        /* The "Flashy" Shadow Effect */
+        .post-list li:nth-child(odd) {
+            box-shadow: 12px 12px 0px var(--accent-3);
+        }
+
+        .post-list li:nth-child(even) {
+            box-shadow: 12px 12px 0px var(--accent-1);
+        }
+
         .post-list li:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-color);
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
-        }
-
-        .post-list li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 4px;
-            background: var(--secondary-accent);
-            transition: width 0.3s ease;
-        }
-
-        .post-list li:hover::before {
-            width: 8px;
-            background: var(--accent-color);
+            transform: translate(-4px, -4px);
+            box-shadow: 18px 18px 0px var(--accent-2);
+            border-color: var(--accent-2);
         }
 
         .post-date {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            color: var(--accent-color);
+            font-family: monospace;
             font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 10px;
+            display: block;
         }
 
         .post-title {
-            display: block;
-            font-size: 1.4rem;
-            margin: 0.5rem 0;
-            font-weight: 600;
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 10px 0;
+            text-transform: uppercase;
         }
 
         .post-excerpt {
-            color: var(--text-dim);
-            font-size: 1rem;
+            font-size: 1.1rem;
+            border-top: 2px solid var(--black);
+            padding-top: 10px;
         }
 
         footer {
+            background: var(--black);
+            color: var(--white);
             text-align: center;
-            padding: 3rem;
-            font-size: 0.8rem;
-            color: #444;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Decorative "Audio" Element */
+        .wave-decorator {
+            height: 10px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--black),
+                var(--black) 10px,
+                var(--accent-2) 10px,
+                var(--accent-2) 20px
+            );
+            margin-top: 20px;
         }
     </style>
+</head>
+<body>
+
+    <header>
+        <h1>AI in Audio <br> Engineering</h1>
+        <div class="author-tag">WILLIAM HODGE // CAH 205</div>
+        <div class="wave-decorator"></div>
+    </header>
+
+    <main>
+        <ul class="post-list">
+            <li>
+                <span class="post-date">03.01.2026</span>
+                <div class="post-title">Spectral Repair via CNNs</div>
+                <p class="post-excerpt">How Convolutional Neural Networks are identifying and removing clicks, pops, and hums better than any human engineer.</p>
+            </li>
+            <li>
+                <span class="post-date">02.14.2026</span>
+                <div class="post-title">Virtual Analog & Latency</div>
+                <p class="post-excerpt">Breaking down the real-time processing hurdles of running complex AI models inside a DAW.</p>
+            </li>
+            <li>
+                <span class="post-date">01.28.2026</span>
+                <div class="post-title">The "Deepfake" Vocalist</div>
+                <p class="post-excerpt">Navigating the copyright and creative implications of high-fidelity AI voice cloning in pop music.</p>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        &copy; 2026 | William Hodge | CAH 205 AI Newsletter
+    </footer>
+
+</body>
+</html>
 </head>
 <body>
 

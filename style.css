@@ -1,85 +1,106 @@
-/* style.css - The Flashy Minimalist Newsletter */
+
+/* style.css - CAH 205 AI Newsletter */
 
 :root {
-  --bg-color: #ffffff;
-  --accent-color: #ff3e00; /* Vibrant Orange-Red */
-  --secondary-color: #00f0ff; /* Electric Blue */
-  --text-color: #1a1a1a;
-  --border-width: 3px;
+    --accent-1: #6366f1; /* Indigo */
+    --accent-2: #ec4899; /* Pink */
+    --accent-3: #06b6d4; /* Cyan */
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --bg-glass: rgba(255, 255, 255, 0.7);
+    --border-glass: rgba(255, 255, 255, 0.5);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter', -apple-system, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* Flashy Light Mode Background: Multi-point Mesh Gradient */
+    background-color: #fdfcfb;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.18) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.18) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.18) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(251, 191, 36, 0.18) 0px, transparent 50%);
+    background-attachment: fixed;
 }
 
-/* Flashy Header with a "Shadow" effect */
+/* Header & Titles */
+header {
+    text-align: center;
+    padding: 5rem 1rem 3rem 1rem;
+    width: 100%;
+}
+
 h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: -2px;
-  border-bottom: var(--border-width) solid var(--text-color);
-  display: inline-block;
-  margin-bottom: 1rem;
-  box-shadow: 8px 8px 0px var(--accent-color);
-  padding: 0.5rem 1rem;
+    font-size: clamp(2.5rem, 8vw, 4rem); /* Responsive sizing */
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    
+    /* Mixed color gradient title */
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-2), var(--accent-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Simple but bold navigation */
-nav a {
-  text-decoration: none;
-  font-weight: 800;
-  color: var(--text-color);
-  border: var(--border-width) solid var(--text-color);
-  padding: 0.5rem 1rem;
-  margin-right: 10px;
-  transition: all 0.2s ease;
+.author-tag {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-nav a:hover {
-  background-color: var(--secondary-color);
-  box-shadow: 4px 4px 0px var(--text-color);
-  transform: translate(-2px, -2px);
+/* Content Area */
+main {
+    width: 90%;
+    max-width: 850px;
+    flex-grow: 1;
 }
 
-/* Newsletter Cards */
-.issue-card {
-  border: var(--border-width) solid var(--text-color);
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: white;
-  box-shadow: 10px 10px 0px var(--text-color);
-  transition: transform 0.2s;
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
 }
 
-.issue-card:hover {
-  transform: scale(1.02);
-  border-color: var(--accent-color);
+/* Post Styling (for when you add <li> items) */
+.post-list li {
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glass);
+    border-radius: 24px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.issue-date {
-  font-weight: bold;
-  text-transform: uppercase;
-  color: var(--accent-color);
-  font-size: 0.9rem;
+.post-list li:hover {
+    transform: translateY(-5px) scale(1.01);
+    border-color: var(--accent-1);
+    box-shadow: 0 20px 30px -10px rgba(99, 102, 241, 0.15);
 }
 
-/* Flashy Button */
-.subscribe-btn {
-  background: var(--text-color);
-  color: white;
-  padding: 1rem 2rem;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-.subscribe-btn:hover {
-  background: var(--accent-color);
+/* Footer */
+footer {
+    padding: 4rem 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-align: center;
 }

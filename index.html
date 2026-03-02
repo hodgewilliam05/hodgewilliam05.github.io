@@ -5,35 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI in Audio Engineering | William Hodge</title>
     <style>
-        :root {
-            --neon-pink: #ff007f;
-            --neon-blue: #00e5ff;
-            --neon-purple: #9d00ff;
-            --dark-bg: #050505;
-        }
-
+        /* Flashy Animated Gradient Background */
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--dark-bg);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Animated Mixed Color Background Header */
-        header {
-            width: 100%;
-            padding: 80px 20px;
-            text-align: center;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #ffffff;
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-            margin-bottom: 40px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         @keyframes gradientBG {
@@ -42,95 +26,56 @@
             100% { background-position: 0% 50%; }
         }
 
+        /* Glassmorphism Container */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center;
+        }
+
         header h1 {
-            font-size: clamp(2rem, 8vw, 4rem);
+            font-size: 3rem;
             margin: 0;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            text-shadow: 3px 3px 15px rgba(0,0,0,0.4);
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         header p {
             font-size: 1.2rem;
-            font-weight: 300;
-            letter-spacing: 1px;
-            margin-top: 10px;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-        }
-
-        main {
-            width: 90%;
-            max-width: 900px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            border-radius: 24px;
-            padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-        }
-
-        h2 {
-            color: var(--neon-blue);
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 3px;
+            opacity: 0.9;
             margin-bottom: 30px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 10px;
         }
 
-        /* The post-list container */
+        hr {
+            border: 0;
+            height: 1px;
+            background: rgba(255,255,255,0.3);
+            margin: 20px 0;
+        }
+
+        /* Post List Styling */
         .post-list {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 20px 0;
+            text-align: left;
         }
 
-        /* Styling for future list items */
+        /* Styling for when you add <li> items later */
         .post-list li {
-            background: rgba(255, 255, 255, 0.03);
-            margin-bottom: 20px;
-            padding: 25px;
-            border-radius: 15px;
-            border-left: 4px solid var(--neon-purple);
-            transition: all 0.3s ease;
-        }
-
-        .post-list li:hover {
-            transform: scale(1.02);
-            background: rgba(255, 255, 255, 0.08);
-            border-left-color: var(--neon-pink);
-            cursor: pointer;
-        }
-
-        footer {
-            margin: 60px 0 30px;
-            opacity: 0.5;
-            font-size: 0.8rem;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>AI in Audio Engineering</h1>
-        <p>A CAH 205 Newsletter | Curated by William Hodge</p>
-    </header>
-
-    <main>
-        <h2>Recent Broadcasts</h2>
-        
-        <ul class="post-list">
-            </ul>
-    </main>
-
-    <footer>
-        &copy; 2026 William Hodge | Designed for the Future of Sound
-    </footer>
-
-</body>
-</html>
+            background: rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.
     <main>
         <section>
             <h2>Latest Entries</h2>

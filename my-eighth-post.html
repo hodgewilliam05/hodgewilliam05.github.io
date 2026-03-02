@@ -1,48 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Danger of False Human Authorization | CAH 205 AI Newsletter</title>
+    <title>The Danger of False Human Authorization | CAH 205</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <article class="newsletter-post">
         <header>
-            <span class="category">Safety & Ethics</span>
-            <h1>The Illusion of Oversight: The Dangers of False Human Authorizations</h1>
-            <p class="byline">Published for CAH 205</p>
+            <p class="edition">CAH 205: AI Ethics & Governance</p>
+            <h1>The Illusion of Oversight: The Dangers of False Human Authorization</h1>
         </header>
 
         <section class="content">
-            <p>In the rapid deployment of Artificial Intelligence, the <strong>"Human-in-the-Loop" (HITL)</strong> model is often touted as the ultimate fail-safe. However, a growing risk is emerging: <strong>False Human Authorization</strong>. This occurs when a person marks an AI output as "verified" or "approved" without actually performing the due diligence required to ensure its accuracy.</p>
+            <p>In the push for AI safety, we often rely on the <strong>"Human-in-the-Loop" (HITL)</strong> model. The logic is simple: if a human signs off on an AI's decision, the system is safe. However, we are seeing a rise in <strong>false human authorizations</strong>—a dangerous trend where the "human" element is reduced to a mindless "Agree" button.</p>
+
+            <h2>The Trap of Automation Bias</h2>
+            <p>When humans are tasked with overseeing high-speed AI outputs, cognitive fatigue leads to <strong>Automation Bias</strong>. This is the tendency to favor suggestions from automated systems even when they contradict common sense. This turns a critical safety check into a "rubber-stamping" exercise.</p>
 
             
 
-            <h2>The "Rubber Stamping" Problem</h2>
-            <p>As AI systems become more fluent, humans tend to fall victim to <strong>Automation Bias</strong>—the propensity to favor suggestions from automated systems even when they contradict human observation. In high-stakes environments, this leads to "rubber stamping," where the human becomes a passive observer rather than a critical evaluator.</p>
-            
-            <h3>Key Risks of Superficial Oversight:</h3>
+            <h3>Why This Matters</h3>
             <ul>
-                <li><strong>Algorithmic Drift:</strong> Without genuine human intervention, biased or degrading models go unnoticed for longer periods.</li>
-                <li><strong>Diffusion of Responsibility:</strong> If an AI-driven decision causes harm, the presence of a "human authorizer" may be used to shield developers from liability, even if the human didn't have the tools to properly audit the choice.</li>
-                <li><strong>Security Exploitation:</strong> Prompt injection attacks can trick an AI into requesting sensitive permissions that a fatigued human might grant with a single, unthinking click.</li>
+                <li><strong>Diffusion of Responsibility:</strong> When things go wrong, organizations may point to the "human authorizer" as a scapegoat, even if that human didn't have the time or tools to actually audit the AI.</li>
+                <li><strong>Systemic Fragility:</strong> If an AI hallucinates a legal precedent or a medical diagnosis, a distracted human supervisor becomes a single point of failure.</li>
+                <li><strong>Security Risks:</strong> Malicious actors can exploit this fatigue by burying harmful requests inside "normal" looking AI prompts, banking on a human to click "Authorize" without reading the fine print.</li>
             </ul>
 
             <blockquote>
-                "The danger isn't that AI will take over the world; it's that we will hand it the keys while we're asleep at the wheel."
+                "A human-in-the-loop is only a safeguard if the human has the agency, time, and expertise to say 'No'."
             </blockquote>
         </section>
 
-        <section class="resources">
-            <hr>
-            <h2>Further Reading & Resources</h2>
-            <ul class="links">
-                <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank">NIST AI Risk Management Framework</a></li>
-                <li><a href="https://www.partnershiponai.org/responsible-ai-practices/" target="_blank">Partnership on AI: Responsible Practices</a></li>
-                <li><a href="https://plato.stanford.edu/entries/ethics-ai/" target="_blank">Stanford Encyclopedia: Ethics of AI & Computing</a></li>
+        <hr>
+
+        <footer class="resources">
+            <h3>Resources for Further Reading</h3>
+            <ul class="link-list">
+                <li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework (RMF)</a></li>
+                <li><a href="https://humanrights.gov/ai-accountability">Federal Guidelines on AI Accountability</a></li>
+                <li><a href="https://arxiv.org/abs/2303.07127">Research Paper: The Impact of Automation Bias on LLM Supervision</a></li>
             </ul>
-        </section>
+        </footer>
     </article>
 </body>
 </html>

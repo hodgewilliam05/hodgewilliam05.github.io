@@ -6,113 +6,128 @@
     <title>AI in Audio Engineering | William Hodge</title>
     <style>
         :root {
-            --primary-gradient: linear-gradient(135deg, #6e8efb, #a777e3, #ff8c7f);
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --text-color: #ffffff;
+            --bg-dark: #0a0a0c;
+            --accent-gradient: linear-gradient(45deg, #ff00cc, #3333ff, #00d4ff);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-main: #f0f0f0;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             margin: 0;
             padding: 0;
-            background: #0f0c29; /* Fallback */
-            background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-            color: var(--text-color);
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
         }
 
+        /* Flashy Header Section */
         header {
             width: 100%;
-            padding: 4rem 0;
-            background: var(--primary-gradient);
+            padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            background: var(--accent-gradient);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
-        .header-content h1 {
-            font-size: 3.5rem;
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header h1 {
+            font-size: 3rem;
             margin: 0;
             letter-spacing: -1px;
             text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
         }
 
-        .header-content p {
+        header p {
             font-size: 1.2rem;
-            opacity: 0.9;
             font-weight: 300;
+            margin-top: 10px;
+            opacity: 0.9;
         }
 
-        main {
-            max-width: 800px;
+        /* Main Content Container */
+        .container {
             width: 90%;
-            margin: -2rem auto 4rem auto;
-            padding: 2rem;
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
+            max-width: 800px;
+            margin: -40px auto 40px;
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
 
         h2 {
-            border-bottom: 2px solid #ff8c7f;
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            border-left: 4px solid #ff00cc;
+            padding-left: 15px;
+            margin-bottom: 30px;
         }
 
+        /* The requested post-list class */
         .post-list {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
+        /* Placeholder style for list items when added */
         .post-list li {
-            background: rgba(255, 255, 255, 0.05);
-            margin-bottom: 1rem;
-            padding: 1.5rem;
+            background: rgba(255,255,255,0.03);
+            margin-bottom: 15px;
+            padding: 20px;
             border-radius: 12px;
-            transition: transform 0.3s ease, background 0.3s ease;
-            border-left: 5px solid #a777e3;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
         }
 
         .post-list li:hover {
-            transform: translateX(10px);
-            background: rgba(255, 255, 255, 0.1);
+            border-color: #00d4ff;
+            transform: translateY(-3px);
+            background: rgba(255,255,255,0.08);
         }
 
         footer {
             margin-top: auto;
-            padding: 2rem;
-            font-size: 0.9rem;
-            opacity: 0.6;
+            padding: 30px;
+            font-size: 0.8rem;
+            opacity: 0.5;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="header-content">
-            <h1>AI in Audio Engineering</h1>
-            <p>CAH 205 AI Newsletter | Curated by <strong>William Hodge</strong></p>
-        </div>
+        <h1>AI in Audio Engineering</h1>
+        <p>CAH 205 Newsletter | By William Hodge</p>
     </header>
 
-    <main>
-        <h2>Latest Dispatches</h2>
+    <div class="container">
+        <h2>Recent Updates</h2>
+        
         <ul class="post-list">
             </ul>
-    </main>
+    </div>
 
     <footer>
-        &copy; 2026 William Hodge. All rights reserved.
+        &copy; 2026 William Hodge | AI in Audio Engineering
     </footer>
 
 </body>
 </html>
+
     <main>
         <section>
             <h2>Latest Entries</h2>
